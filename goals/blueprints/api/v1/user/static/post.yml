@@ -1,0 +1,52 @@
+This route serve for create of user
+---
+tags:
+  - User
+parameters:
+  - in: body
+    name: body
+    required: true
+    schema:
+      id: create_user_body
+      properties:
+        username:
+          type: string
+          description: The name of the user
+        email:
+          type: string
+          description: The email of the user, of which must be unique
+        password:
+          type: string
+          description: The password of the user
+        
+responses:
+  200:
+    description: Created user with success
+    schema:
+      id: create_user_response
+      properties:
+        username:
+          type: string
+          description: The name of the user
+        id:
+          type: string
+          description: The id of the user
+        email:
+          type: string
+          description: The name of the user
+  400:
+    description: Trying to create a user with incorrect data 
+    schema:
+      id: create_user_response_error_email
+      properties:
+        error:
+          type: string
+          description: Information of error
+  500:
+    description: Internal error 
+    schema:
+      id: create_user_response_error_internal
+      properties:
+        error:
+          type: string
+          description: Information of error

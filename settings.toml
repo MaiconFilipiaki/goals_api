@@ -1,0 +1,10 @@
+[default]
+RUN_DEBUG='False'
+RUN_USE_RELOADER='False'
+SECRET_KEY='ThisIsSecret'
+
+[development]
+RUN_DEBUG='True'
+RUN_USE_RELOADER='True'
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:12591647mdf@127.0.0.1/goals'
+SQLALCHEMY_TRACK_MODIFICATIONS = false
