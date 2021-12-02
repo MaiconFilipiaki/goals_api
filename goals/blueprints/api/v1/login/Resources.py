@@ -21,7 +21,7 @@ class LoginResource(Resource):
 
         payload = {
             "id": user.id,
-            "exp": datetime.datetime.utcnow() + datetime.timedelta(minutes=10)
+            "exp": datetime.datetime.utcnow() + datetime.timedelta(minutes=40320)
         }
         token = jwt.encode(payload, current_app.config.get('SECRET_KEY'))
 

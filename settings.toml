@@ -2,9 +2,10 @@
 RUN_DEBUG='False'
 RUN_USE_RELOADER='False'
 SECRET_KEY='ThisIsSecret'
+FLASK_RUN_PORT=80
 
 [development]
 RUN_DEBUG='True'
 RUN_USE_RELOADER='True'
-SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:12591647mdf@127.0.0.1/goals'
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:12591647mdf@/goals?unix_socket=/cloudsql/goals-back:us-central1:goals'
 SQLALCHEMY_TRACK_MODIFICATIONS = false

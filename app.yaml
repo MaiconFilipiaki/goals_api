@@ -1,0 +1,9 @@
+runtime: python37
+entrypoint: python -m goals.app
+service: goals
+env_variables:
+  CLOUD_SQL_USERNAME: root
+  CLOUD_SQL_PASSWORD: 12591647mdf
+  CLOUD_SQL_DATABASE_NAME: goals
+  CLOUD_SQL_CONNECTION_NAME: goals-back:us-central1:goals
+
